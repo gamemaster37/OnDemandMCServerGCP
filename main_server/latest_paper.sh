@@ -43,6 +43,7 @@ if curl -L -o "$FILENAME" "$DOWNLOAD_URL"; then
     mv "$FILENAME" server.jar
     echo "$LATEST_STABLE_VERSION $LATEST_STABLE_BUILD" > "$VERSION_LOG"
     echo "Updated server.jar to the latest Paper build."
+    exit 0
 else
     echo "Failed to download the jar file"
     exit 1
